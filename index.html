@@ -9,13 +9,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script>
     $(document).click(function(event) {
-        // console.log($(event.target).text());
+
+              // let ctext=$(event.target).attr("href");
         let ctext=$(event.target).text();
+        console.log(ctext);
         let target = $( event.target );
         if ( target.is( "img" )) {
             let ilink=$(event.target).attr('src');
             $(".etxt").append("<li><img src='"+ilink+"'></li>")
         } else{
+            // $(".etxt").append("<iframe src="+ctext+"width='150'></iframe>")
             $(".etxt").append("<li>"+ctext+"</li>")
         }
         
